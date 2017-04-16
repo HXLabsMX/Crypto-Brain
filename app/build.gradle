@@ -2,10 +2,10 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "25.0.0"
+    buildToolsVersion "25.0.2"
     defaultConfig {
         applicationId "com.herxlabs.cryptobrain"
-        minSdkVersion 19
+        minSdkVersion 22
         targetSdkVersion 25
         versionCode 1
         versionName "0.1"
@@ -26,6 +26,6 @@ dependencies {
     })
     compile 'com.jakewharton:butterknife:8.5.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
-    compile 'com.android.support:appcompat-v7:25.1.1'
+    compile 'com.android.support:appcompat-v7:25.2.0'
     testCompile 'junit:junit:4.12'
 }

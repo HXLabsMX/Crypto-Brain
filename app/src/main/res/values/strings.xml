@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Crypto Brain</string>
+    <string name="send_to">Share</string>
 </resources>
