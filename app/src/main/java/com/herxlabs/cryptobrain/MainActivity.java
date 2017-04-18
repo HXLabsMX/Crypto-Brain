@@ -6,6 +6,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,7 +27,30 @@ public class MainActivity extends AppCompatActivity {
     }
     @OnClick(R.id.btnCrypt)
     public void crypt() {
-        // TODO encript ;-D
+        String crypto = toCrypt.getText().toString().toUpperCase();
+        crypto = crypto.replace("A", "4");
+        crypto = crypto.replace("B", "8");
+        crypto = crypto.replace("E", "3");
+        crypto = crypto.replace("G", "6");
+        crypto = crypto.replace("I", "1");
+        crypto = crypto.replace("O", "0");
+        crypto = crypto.replace("P", "9");
+        crypto = crypto.replace("S", "5");
+        crypto = crypto.replace("T", "7");
+        crypto = crypto.replace("Z", "2");
+        crypto = crypto.replace("-", "--");
+        crypto = crypto.replace(" ", "-");
+        crypted.setText(crypto);
+        //Oculta teclado
+        View view = getCurrentFocus();
+        if (view != null) {
+            InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+        }
+        //Mensaje
+        Context context = getApplicationContext();
+        Toast toastMessage = Toast.makeText(context, "CryptoBrained", Toast.LENGTH_SHORT);
+        toastMessage.show();
     }
     @OnClick(R.id.btnClear)
     public void clear() {
