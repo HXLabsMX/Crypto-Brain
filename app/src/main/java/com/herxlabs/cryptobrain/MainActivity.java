@@ -16,6 +16,7 @@ import android.widget.Toast;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import mehdi.sakout.aboutpage.AboutPage;
 
 public class MainActivity extends AppCompatActivity {
     @BindView(R.id.txtToCrypt)TextView toCrypt;
